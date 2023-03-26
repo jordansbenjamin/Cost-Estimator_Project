@@ -12,12 +12,14 @@ body {
 
 h1 {
     color: rgb(83, 49, 156);
+    margin: 32px 0 64px 0;
 }
 
 .container {
     background-color: white;
     width: 100%;
     max-width: 900px;
+    box-sizing: border-box;
     border-radius: 20px;
     padding: 0 64px 64px 64px;
     display: flex;
@@ -140,6 +142,7 @@ h1 {
 .slider {
     width: 100%;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .slider .bar {
@@ -202,12 +205,18 @@ h1 {
     padding: 16px 32px;
     box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.1);
     text-align: center;
-    text-transform: uppercase;
     font-weight: bold;
     color: rgb(83, 49, 156);
+    transition: 0.15s transform ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-8px);
 }
 
 .card .top-section {
+    text-transform: uppercase;
     padding: 8px;
 }
 
@@ -224,4 +233,31 @@ h1 {
     width: 30%;
     border: 1px solid rgb(210, 210, 210);
     border-radius: 2px;
+}
+
+.card button {
+    border: none;
+    color: white;
+    background-color: rgb(83, 49, 156);
+    padding: 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 8px 0;
+    transition: 0.15s transform ease;
+}
+
+.card button:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+.card .save-header {
+    color: white;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(53, 10, 74, 1) 36%, rgba(83, 49, 156, 1) 100%);
+    width: 100%;
+    position: absolute;
+    top: -24px;
+    left: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
